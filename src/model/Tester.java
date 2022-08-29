@@ -1,5 +1,7 @@
 package model;
 
+import service.CustomerService;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -10,8 +12,10 @@ public class Tester {
        // System.out.println(customer);
 
 
-        FreeRoom freeRoom = new FreeRoom("100",20.0,RoomType.SINGLE,true);
+       // FreeRoom freeRoom = new FreeRoom("100",20.0,RoomType.SINGLE,true);
       //  System.out.println(freeRoom);
+
+
 
 /*
         Date date = new Date();

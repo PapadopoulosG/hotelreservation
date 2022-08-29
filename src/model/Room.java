@@ -38,12 +38,10 @@ public class Room implements IRoom{
 
     @Override
     public String toString(){
-        if(isFree){
+
             return ("\n Room number: "+ roomNumber + " is available. Price is: "
                     + price +" per night. This room is a "+ enumeration+ " one.");
-        }else {
-            return ("\n This room is not available.");
-        }
+
 
     }
 

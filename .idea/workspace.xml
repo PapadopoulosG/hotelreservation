@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12fea22b-059d-46bb-8d3e-9deaa3b12887" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="12fea22b-059d-46bb-8d3e-9deaa3b12887" name="Changes" comment="model classes">
+      <change afterPath="$PROJECT_DIR$/src/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FreeRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FreeRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/IRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/IRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RoomType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +71,14 @@
       <option name="presentableId" value="Default" />
       <updated>1661535098024</updated>
     </task>
+    <task id="LOCAL-00001" summary="model classes">
+      <created>1661629780627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661629780627</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,6 +91,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="model classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="model classes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hotel_reservation$Tester.ic" NAME="Tester Coverage Results" MODIFIED="1661602892746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

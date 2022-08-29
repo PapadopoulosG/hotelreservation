@@ -1,6 +1,6 @@
 package model;
 
-public class FreeRoom extends Room{
+public class FreeRoom extends Room {
 
 
     public FreeRoom(String roomNumber, Double price, RoomType enumeration, boolean isFree) {
@@ -16,11 +16,11 @@ public class FreeRoom extends Room{
     If no check for isFree though, toString will print that the room is available even if isFree is false
     check at runtime
      */
-    public String toString(){
-        if(isFree) {
+    public String toString() {
+        if (isFree) {
             return ("\n  Room number: " + roomNumber + " price  "
                     + price + "  bed " + enumeration + "  ");
-        }else
+        } else
             return ("\n This room is not available.");
     }
 
