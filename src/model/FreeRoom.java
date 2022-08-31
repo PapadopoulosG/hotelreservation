@@ -13,7 +13,7 @@ public class FreeRoom extends Room {
 
     /*
     TO FIX: no point in checking if room is free, if freeRoom is called room is free.
-    If no check for isFree though, toString will print that the room is available even if isFree is false
+    If no check for isFree though, toString prints that the room is available even if isFree is false
     check at runtime
      */
     public String toString() {
