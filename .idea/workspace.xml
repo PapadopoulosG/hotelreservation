@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12fea22b-059d-46bb-8d3e-9deaa3b12887" name="Changes" comment="Udacity's hotel reservation exercise">
-      <change afterPath="$PROJECT_DIR$/src/service/ReservationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/ServiceTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FreeRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FreeRoom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ServiceTester">
+    <configuration name="ServiceTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="service.ServiceTester" />
+      <module name="hotel reservation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.Tester" />
       <module name="hotel reservation" />
@@ -57,6 +72,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ServiceTester" />
         <item itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
@@ -84,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661796975526</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Udacity's hotel reservation exercise">
+      <created>1661968615636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661968615636</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

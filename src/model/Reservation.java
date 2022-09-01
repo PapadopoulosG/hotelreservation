@@ -49,9 +49,11 @@ public class Reservation {
     }
 
     @Override
-    public String toString(){
-        return "\n Customer "+customer+" has reserved room "+room+" and is checking in on "+
-                checkInDate+" and checking out on "+checkOutDate;
+    public String toString() {
+        return "Customer: " + this.customer.toString()
+                + "\nRoom " + this.room.toString()
+                + "\nCheckIn Date: " + this.checkInDate
+                + "\nCheckOut Date: " + this.checkOutDate;
     }
 
 }

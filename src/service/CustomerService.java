@@ -12,9 +12,9 @@ public class CustomerService {
 
 
     public static CustomerService getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new CustomerService();
-        }
+//        if (INSTANCE == null) {
+//            INSTANCE = new CustomerService();
+//        }
         return INSTANCE;
     }
 
@@ -31,9 +31,9 @@ public class CustomerService {
         return mapOfCustomers.get(customerEmail);
     }
 
-    public List<Customer> getAllCustomers() {
+    public Collection<Customer> getAllCustomers() {
 
-        return (List<Customer>) mapOfCustomers.values();
+        return  mapOfCustomers.values();
     }
 
 

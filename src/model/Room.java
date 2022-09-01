@@ -37,12 +37,10 @@ public class Room implements IRoom{
     }
 
     @Override
-    public String toString(){
-
-            return ("\n Room number: "+ roomNumber + " is available. Price is: "
-                    + price +" per night. This room is a "+ enumeration+ " one.");
-
-
+    public String toString() {
+        return "Number: " + this.roomNumber
+                + " Price: $" + this.price
+                + " Enumeration: " + this.enumeration;
     }
 
 }

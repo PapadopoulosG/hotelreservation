@@ -13,10 +13,12 @@ public class ReservationService {
     private Map<String, IRoom> roomMap = new HashMap<>();
     private Map<String, Collection<Reservation>> reservationMap = new HashMap<>();
 
+    private static final int RECOMMENDED_ROOMS_DEFAULT_PLUS_DAYS = 7;
+
     public static ReservationService getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new ReservationService();
-        }
+//        if (INSTANCE == null) {
+//            INSTANCE = new ReservationService();
+//        }
         return INSTANCE;
     }
 
@@ -98,5 +100,16 @@ public class ReservationService {
                 && checkOutDate.after(reservation.getCheckInDate());
     }
 
+    public Date addDefaultPlusDays(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.DATE, RECOMMENDED_ROOMS_DEFAULT_PLUS_DAYS);
+
+        return calendar.getTime();
+    }
+
+    public Collection<IRoom> findAlternativeRooms(final Date checkInDate, final Date checkOutDate) {
+        return findRooms(addDefaultPlusDays(checkInDate), addDefaultPlusDays(checkOutDate));
+    }
 
 }
