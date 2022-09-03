@@ -1,6 +1,7 @@
 package service;
 
 import model.Customer;
+import model.Reservation;
 import model.Room;
 import service.CustomerService;
 
@@ -9,6 +10,7 @@ import java.text.SimpleDateFormat;
 
 
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 
 import static model.RoomType.SINGLE;
@@ -29,6 +31,7 @@ public class ServiceTester {
 
         reservationTest.addRoom(new Room("3",2.0, SINGLE,false));
       //  System.out.println(reservationTest.getRoom("3"));
+
 
 
         String pattern = "dd-MM-yyyy";

@@ -31,6 +31,10 @@ public class ReservationService {
         return (roomMap.get(roomNumber));
     }
 
+    public Collection<IRoom> getAllRooms() {
+        return roomMap.values();
+    }
+
     public Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
         Reservation reservation = new Reservation(customer, room, checkInDate, checkOutDate);
         Collection<Reservation> customerReservations = getCustomerReservation(customer);
