@@ -8,17 +8,15 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class ReservationService {
-    private static ReservationService INSTANCE;
+    private static ReservationService INSTANCE = new ReservationService();
     private final ReservationService reservationService = ReservationService.getInstance();
     private Map<String, IRoom> roomMap = new HashMap<>();
     private Map<String, Collection<Reservation>> reservationMap = new HashMap<>();
 
-    private static final int RECOMMENDED_ROOMS_DEFAULT_PLUS_DAYS = 7;
+    private static final int RECOMMENDED_ROOMS_DEFAULT_PLUS_DAYS = 1;
 
     public static ReservationService getInstance() {
-//        if (INSTANCE == null) {
-//            INSTANCE = new ReservationService();
-//        }
+
         return INSTANCE;
     }
 

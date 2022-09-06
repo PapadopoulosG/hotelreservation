@@ -25,29 +25,30 @@ public class MainMenu {
 
                 if (input.length() == 1) {
                     switch (input.charAt(0)) {
-                        case '1' :{
+                        case '1' :
                             findAndReserveRoom();
                             break;
-                        }
-                        case '2':{
+
+                        case '2':
                         seeMyReservation();
-                        }
-                        case '3':{
+
+                        case '3':
                             createAccount();
                             break;
-                        }
 
-                        case '4':{
+
+                        case '4':
                             AdminMenu.adminMenu();
                             break;
-                        }
 
-                        case '5':{
+
+                        case '5':
                             System.out.println("\nExit:");
                             break;
-                        }
-                        default -> System.out.println("\nInvalid Option");
-                        break;
+
+                        default :
+                            System.out.println("\nInvalid Option");
+                            break;
                     }
 
                     }else{
@@ -63,6 +64,13 @@ public class MainMenu {
 
     }
 
+    /*TODO: add code so user is not able to choose a date where:
+        day>31
+        day<1
+        month<1
+        month>12
+        date can not be in the past
+     */
     private static void findAndReserveRoom(){
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter check in date. Format is:" + defaultDateFormat);
@@ -194,7 +202,7 @@ public class MainMenu {
         final String lastName = scanner.nextLine();
 
         try {
-            hotelResource.createACustomer(email, firstName, lastName);
+            hotelResource.createACustomer( firstName, lastName, email);
             System.out.println("Account created successfully!");
 
             printMainMenu();

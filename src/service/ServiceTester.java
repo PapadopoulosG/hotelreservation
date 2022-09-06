@@ -1,3 +1,4 @@
+/*
 package service;
 
 import model.Customer;
@@ -12,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
+
 
 import static model.RoomType.SINGLE;
 
@@ -47,5 +49,21 @@ public class ServiceTester {
                 checkInDate,checkOutDate);
 
         reservationTest.printAllReservation();
+
+        enum test1{
+            one , two, three
+        }
+
+//        String pap = String.valueOf(test1.valueOf("one"));
+        test1 pap = test1.one;
+        String papa = String.valueOf(pap);
+
+        System.out.println("\n "+ papa);
+
+
+
     }
+
+
 }
+*/

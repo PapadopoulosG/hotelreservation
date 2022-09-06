@@ -15,13 +15,15 @@ public class FreeRoom extends Room {
     TO FIX: no point in checking if room is free, if freeRoom is called room is free.
     If no check for isFree though, toString prints that the room is available even if isFree is false
     check at runtime
+
+    UPDATE: isFree is about price, not availability
      */
     public String toString() {
-        if (isFree) {
+       // if (isFree) {
             return ("\n  Room number: " + roomNumber + " price  "
                     + price + "  bed " + enumeration + "  ");
-        } else
-            return ("\n This room is not available.");
+     //   } else
+       //     return ("\n This room is not available.");
     }
 
 }

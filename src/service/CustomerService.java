@@ -5,16 +5,13 @@ import model.Customer;
 import java.util.*;
 
 public class CustomerService {
-    public static CustomerService INSTANCE;
+    public static CustomerService INSTANCE = new CustomerService();
     private final CustomerService customerService = CustomerService.getInstance();
     // List<Customer> listOfCustomers = new ArrayList<Customer>();
     Map<String, Customer> mapOfCustomers = new HashMap<String, Customer>();
 
 
     public static CustomerService getInstance() {
-//        if (INSTANCE == null) {
-//            INSTANCE = new CustomerService();
-//        }
         return INSTANCE;
     }
 

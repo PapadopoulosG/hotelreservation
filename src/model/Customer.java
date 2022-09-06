@@ -1,14 +1,19 @@
 package model;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Customer {
     public String firstName,lastName,email;
+    String emailRegex= "^(.+)@(.+).(.+)$";
 
     public Customer(String firstName, String lastName, String email) {
+
+        this.isValidEmail(email);
         this.firstName = firstName;
         this.lastName = lastName;
-        setEmail(email);
+        this.email = email;
+
     }
 
     public String getFirstName() {
@@ -31,17 +36,7 @@ public class Customer {
         return email;
     }
 
-    public void setEmail(String email) {
-        String emailRegex= "^(.+)@(.+).(.+)$";
-        Pattern pattern = Pattern.compile(emailRegex);
 
-        if(!pattern.matcher(email).matches()){
-            throw new IllegalArgumentException("Invalid email");
-        }
-        else {
-            this.email = email;
-        }
-    }
 
    @Override
     public String toString(){
@@ -49,5 +44,17 @@ public class Customer {
     }
 
 
+    private void isValidEmail(final String email) {
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher m = pattern.matcher(email);
+        boolean b = m.matches();
+
+        if(!b)
+        {
+            throw new IllegalArgumentException("Invalid email");
+        }
+
+
+    }
 
 }
