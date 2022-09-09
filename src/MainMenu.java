@@ -172,13 +172,26 @@ public class MainMenu {
         }
     }
 
+    /*
+    FIXED: seeMyReservation throws a NullPointerException when the user searches for an email but a customer with that email
+     has not been created yet
+     */
     private static void seeMyReservation() {
         final Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter your Email format: name@domain.com");
         final String customerEmail = scanner.nextLine();
 
-        printReservations(hotelResource.getCustomersReservations(customerEmail));
+        try{
+            printReservations(hotelResource.getCustomersReservations(customerEmail));
+        }
+        catch (NullPointerException ex)
+        {
+            System.out.println("There is no customer with this email.");
+            printMainMenu();
+        }
+
+
     }
 
     private static void printReservations(final Collection<Reservation> reservations) {
