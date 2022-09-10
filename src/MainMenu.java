@@ -2,11 +2,16 @@ import api.HotelResource;
 import model.IRoom;
 import model.Reservation;
 
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainMenu {
 
@@ -64,17 +69,21 @@ public class MainMenu {
 
     }
 
-    /*TODO: add code so user is not able to choose a date where:
-        day>31
+    /* OPTIONAL TODO: add code so user is not able to choose a date where:
+        day>31 || day>29 if feb
         day<1
         month<1
         month>12
         date can not be in the past
+
      */
     private static void findAndReserveRoom(){
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter check in date. Format is:" + defaultDateFormat);
-        Date checkInDate = getInputDate(scanner1);
+        Date checkInDate;
+        checkInDate = getInputDate(scanner1);
+
+
 
         System.out.println("Enter check out date. Format is:"+ defaultDateFormat);
         Date checkOutDate = getInputDate(scanner1);
@@ -88,6 +97,7 @@ public class MainMenu {
 
                 if(alternativeRooms.isEmpty()){
                     System.out.println("\nThere are no rooms available.");
+                    printMainMenu();
                 }
                 else {
                     Date alternativeCheckIn = hotelResource.addDefaultPlusDays(checkInDate);
@@ -242,4 +252,9 @@ public class MainMenu {
                 "--------------------------------------------\n" +
                 "Please select a number for the menu option:\n");
     }
+
+
 }
+
+
+

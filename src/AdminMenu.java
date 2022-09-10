@@ -169,7 +169,9 @@ import java.util.Scanner;
                 System.out.println("No customers found.");
             } else {
                 adminResource.getAllCustomers().forEach(System.out::println);
+
             }
+            printMenu();
         }
 
         private static void displayAllReservations() {
