@@ -8,13 +8,14 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class ReservationService {
-    private static ReservationService INSTANCE = new ReservationService();
+    private static final ReservationService INSTANCE = new ReservationService();
     private final ReservationService reservationService = ReservationService.getInstance();
-    private Map<String, IRoom> roomMap = new HashMap<>();
-    private Map<String, Collection<Reservation>> reservationMap = new HashMap<>();
+    private final Map<String, IRoom> roomMap = new HashMap<>();
+    private final Map<String, Collection<Reservation>> reservationMap = new HashMap<>();
 
-    private static final int RECOMMENDED_ROOMS_DEFAULT_PLUS_DAYS = 1;
+    private static final int addDayToFindAlternativeRoom = 7;
 
+    private ReservationService(){}
     public static ReservationService getInstance() {
 
         return INSTANCE;
@@ -60,7 +61,6 @@ public class ReservationService {
 
         for (Reservation reservation : allReservations) {
             if (reservationOverlaps(reservation, checkInDate, checkOutDate)) {
-                //na do an if(!reservation.room.isFree()); paragei allo apotelesma
                 unAvailableRooms.add(reservation.getRoom());
             }
         }
@@ -76,7 +76,6 @@ public class ReservationService {
         if (reservations.isEmpty()) {
             System.out.println("There are no reservations.");
         } else {
-           // na dokimaso System.out.println("\n Here are all the reservations: " + reservationMap.values());
             for (Reservation reservation : reservations) {
                 System.out.println("\n " + reservation);
             }
@@ -97,21 +96,20 @@ public class ReservationService {
         return allReservations;
     }
 
-    public boolean reservationOverlaps(Reservation reservation, Date checkInDate, Date checkOutDate) {
+    private boolean reservationOverlaps(Reservation reservation, Date checkInDate, Date checkOutDate) {
         return checkInDate.before(reservation.getCheckOutDate())
                 && checkOutDate.after(reservation.getCheckInDate());
     }
 
-    public Date addDefaultPlusDays(Date date) {
+    public Date addDays(Date date) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
-        calendar.add(Calendar.DATE, RECOMMENDED_ROOMS_DEFAULT_PLUS_DAYS);
-
+        calendar.add(Calendar.DATE, addDayToFindAlternativeRoom);
         return calendar.getTime();
     }
 
     public Collection<IRoom> findAlternativeRooms(final Date checkInDate, final Date checkOutDate) {
-        return findRooms(addDefaultPlusDays(checkInDate), addDefaultPlusDays(checkOutDate));
+        return findRooms(addDays(checkInDate), addDays(checkOutDate));
     }
 
 }

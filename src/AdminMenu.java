@@ -3,20 +3,9 @@ import model.Customer;
 import model.IRoom;
 import model.Room;
 import model.RoomType;
-//import model.customer.Customer;
-//import model.room.IRoom;
-//import model.room.Room;
-//import model.room.enums.RoomType;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Scanner;
-
-
-
-
-
-
 
     public class AdminMenu {
 
@@ -83,12 +72,7 @@ import java.util.Scanner;
 
             System.out.println("Enter price per night:");
             final double roomPrice = enterRoomPrice(scanner);
-                if(roomPrice == 0){
-                    isFree = true;
-                }
-                else {
-                    isFree = false;
-                }
+            isFree = roomPrice == 0;
 
             System.out.println("Enter room type: 1 for single bed, 2 for double bed:");
             final RoomType roomType = enterRoomType(scanner);
@@ -106,8 +90,7 @@ import java.util.Scanner;
             try {
                 return Double.parseDouble(scanner.nextLine());
             } catch (NumberFormatException exp) {
-                System.out.println("Invalid room price! Please, enter a valid double number. " +
-                        "Decimals should be separated by point (.)");
+                System.out.println("Invalid room price. Please enter a double number. " );
                 return enterRoomPrice(scanner);
             }
         }
@@ -116,14 +99,11 @@ import java.util.Scanner;
             try {
                 return RoomType.valueOfLabel(scanner.nextLine());
             } catch (IllegalArgumentException exp) {
-                System.out.println("Invalid room type! Please, choose 1 for single bed or 2 for double bed:");
+                System.out.println("Invalid room type. Please choose 1 for a single room or 2 for a double one. ");
                 return enterRoomType(scanner);
             }
         }
 
-        /*
-                DONE: add code so user's selection is not case sensitive
-         */
         private static void addAnotherRoom() {
             final Scanner scanner = new Scanner(System.in);
 
@@ -156,7 +136,7 @@ import java.util.Scanner;
             Collection<IRoom> rooms = adminResource.getAllRooms();
 
             if(rooms.isEmpty()) {
-                System.out.println("No rooms found.");
+                System.out.println("There have been no rooms created.");
             } else {
                 adminResource.getAllRooms().forEach(System.out::println);
             }
@@ -166,7 +146,7 @@ import java.util.Scanner;
             Collection<Customer> customers = adminResource.getAllCustomers();
 
             if (customers.isEmpty()) {
-                System.out.println("No customers found.");
+                System.out.println("There have been no customers created.");
             } else {
                 adminResource.getAllCustomers().forEach(System.out::println);
 
@@ -175,6 +155,7 @@ import java.util.Scanner;
         }
 
         private static void displayAllReservations() {
+
             adminResource.displayAllReservations();
         }
     }

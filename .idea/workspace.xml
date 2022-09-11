@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12fea22b-059d-46bb-8d3e-9deaa3b12887" name="Changes" comment="added exception handling on seeMyReservation">
+    <list default="true" id="12fea22b-059d-46bb-8d3e-9deaa3b12887" name="Changes" comment="Udacity's hotel reservation application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HotelApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/HotelResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/HotelResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FreeRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FreeRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/ServiceTester.java" beforeDir="false" />
     </list>
     <list id="fa98a183-fe4f-4b49-948c-f5a6ab85ca21" name="changelist" comment="testing services" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662747087418</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Udacity's hotel reservation application">
+      <created>1662828114842</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662828114842</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,7 +177,8 @@
     <MESSAGE value="model classes" />
     <MESSAGE value="Udacity's hotel reservation exercise" />
     <MESSAGE value="added exception handling on seeMyReservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added exception handling on seeMyReservation" />
+    <MESSAGE value="Udacity's hotel reservation application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Udacity's hotel reservation application" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hotel_reservation$Tester.ic" NAME="Tester Coverage Results" MODIFIED="1661602892746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

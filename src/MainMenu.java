@@ -2,21 +2,16 @@ import api.HotelResource;
 import model.IRoom;
 import model.Reservation;
 
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class MainMenu {
 
-    private static String defaultDateFormat = "dd/MM/yyyy";
-    private static HotelResource hotelResource = HotelResource.getInstance();
+    private static final String defaultDateFormat = "dd/MM/yyyy";
+    private static final HotelResource hotelResource = HotelResource.getInstance();
 
     public static void mainMenu(){
 
@@ -59,12 +54,11 @@ public class MainMenu {
                     }else{
                     System.out.println("\nInvalid Choice");
                 }
-                //i while apo kato elegxei mono gia an !=5 na dokimaso ti ginetai genika
             }   while (input.charAt(0) != '5' || input.length() != 1 );
         }
 
         catch (StringIndexOutOfBoundsException ex){
-            System.out.println("Empty Input received");
+            System.out.println("No input received");
         }
 
     }
@@ -100,8 +94,8 @@ public class MainMenu {
                     printMainMenu();
                 }
                 else {
-                    Date alternativeCheckIn = hotelResource.addDefaultPlusDays(checkInDate);
-                    Date alternativeCheckOut = hotelResource.addDefaultPlusDays(checkOutDate);
+                    Date alternativeCheckIn = hotelResource.addDays(checkInDate);
+                    Date alternativeCheckOut = hotelResource.addDays(checkOutDate);
                     System.out.println("\nThere are no rooms on your selected dates. However there are rooms " +
                             "available on these dates: \n Check in: "+ alternativeCheckIn +" \n Check out: "+
                             alternativeCheckOut);
@@ -147,7 +141,7 @@ public class MainMenu {
                 if (hotelResource.getCustomer(customerEmail) == null) {
                     System.out.println("Customer not found.\nYou need to create a new account.");
                 } else {
-                    System.out.println("What room number would you like to reserve?");
+                    System.out.println("Which room number would you like to reserve?");
                     final String roomNumber = scanner.nextLine();
 
                     if (rooms.stream().anyMatch(room -> room.getRoomNumber().equals(roomNumber))) {
@@ -158,13 +152,13 @@ public class MainMenu {
                         System.out.println("Reservation created successfully!");
                         System.out.println(reservation);
                     } else {
-                        System.out.println("Error: room number not available.\nStart reservation again.");
+                        System.out.println("Error: room number not available.\nPlease start over.");
                     }
                 }
 
                 printMainMenu();
             } else {
-                System.out.println("Please, create an account.");
+                System.out.println("Please create an account first.");
                 printMainMenu();
             }
         } else if ("n".equals(choice)){
@@ -226,7 +220,7 @@ public class MainMenu {
 
         try {
             hotelResource.createACustomer( firstName, lastName, email);
-            System.out.println("Account created successfully!");
+            System.out.println("Account created.");
 
             printMainMenu();
         } catch (IllegalArgumentException ex) {

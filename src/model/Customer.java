@@ -4,8 +4,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Customer {
-    public String firstName,lastName,email;
-    String emailRegex= "^(.+)@(.+).(.+)$";
+    private String firstName,lastName,email;
+    private final String emailRegex= "^(.+)@(.+).(.+)$";
 
     public Customer(String firstName, String lastName, String email) {
 

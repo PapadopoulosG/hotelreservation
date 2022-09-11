@@ -53,8 +53,8 @@ public class HotelResource {
         return reservationService.findAlternativeRooms(checkInDate,checkOutDate);
     }
 
-    public Date addDefaultPlusDays( Date date) {
-        return reservationService.addDefaultPlusDays(date);
+    public Date addDays(Date date) {
+        return reservationService.addDays(date);
     }
 
 
